@@ -1,0 +1,4 @@
+[submodule "remapping/WASP"]
+	path = remapping/WASP
+	url = git@github.com:subpolare/WASP.git
+	branch = master
