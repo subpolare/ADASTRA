@@ -17,7 +17,7 @@ filter_se_reads() {
     name=$(echo $1 | cut -d '.' -f1)
     map_dir=${home}mapped_se/
     python3 /home/v.nachatoy/bin/bwa_script/filter_reads.py ${map_dir}${name}.bam ${map_dir}${name}.marked.bam ${genome_dir}GRCh38.primary_assembly.genome.nuclear.txt
-    # rm ${map_dir}${name}.bam
+    rm ${map_dir}${name}.bam
 }
 
 filter_pe_reads() {
@@ -28,7 +28,7 @@ filter_pe_reads() {
     name=$(echo $1 | cut -d '.' -f1)
     map_dir=${home}mapped_pe/
     python3 /home/v.nachatoy/bin/bwa_script/filter_reads.py ${map_dir}${name}.bam ${map_dir}${name}.marked.bam ${genome_dir}GRCh38.primary_assembly.genome.nuclear.txt
-    # rm ${map_dir}${name}.bam
+    rm ${map_dir}${name}.bam
 }
 
 post_processing() {
@@ -43,7 +43,7 @@ post_processing() {
         samtools view -@ $threads -b -F 512 - > ${map_dir}${name}.marked.filtered.bam
         samtools sort -T ${temp} -@ $threads -l0 ${map_dir}${name}.marked.filtered.bam > ${map_dir}${name}.marked.filtered.sorted.bam
         samtools index ${map_dir}${name}.marked.filtered.sorted.bam
-        # rm ${map_dir}${name}.marked.bam ${map_dir}${name}.marked.filtered.bam
+        rm ${map_dir}${name}.marked.bam ${map_dir}${name}.marked.filtered.bam
     done
 }
 
@@ -132,7 +132,7 @@ for reads in $(ls -1 ${main}batch${index}_reads?.txt); do
         python3 ${scripts}unpack_snps/factor_changer.py
     fi
 
-    # rm -r ${home}mapped_se/* ${home}mapped_pe/* ${temp}* ${home}VCFs/* ${home}filter_variants/output/* ${home}remapping/* ${home}work/*
+    rm -r ${home}mapped_se/* ${home}mapped_pe/* ${temp}* ${home}VCFs/* ${home}filter_variants/output/* ${home}remapping/* ${home}work/*
 done
 
 rm ${main}reads?.txt

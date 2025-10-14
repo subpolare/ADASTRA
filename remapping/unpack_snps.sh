@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+index=$1
 allele_counts=/mnt/flash/v.nachatoy/gtrd/batch${index}/remapping/vcf/allele_counts.vcf.gz
 results=/mnt/data/v.nachatoy/gtrd/allele_counts
 
