@@ -26,8 +26,6 @@ The pipeline performs alignment and SNP calling, corrects mapping bias with an u
 
 ### ✨ Tech stack with sleek badge showcase
 
-_**TL;DR: Nextflow**, Shell, Python_ 
-
 ![nextflow](https://img.shields.io/badge/nextflow-%2344CC11.svg?&style=for-the-badge&logo=nextflow&logoColor=white) ![shell](https://img.shields.io/badge/shell-%234EAA25.svg?&style=for-the-badge&logo=gnu-bash&logoColor=white) ![python](https://img.shields.io/badge/python%20-%234584B6.svg?&style=for-the-badge&logo=python&logoColor=white) ![numpy](https://img.shields.io/badge/numpy-%23013243.svg?&style=for-the-badge&logo=numpy&logoColor=white) 
 
 - **Nextflow** ≥ 24  
