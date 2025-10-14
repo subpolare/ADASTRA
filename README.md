@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>ADASTRA Remapping Pipeline</h1>
+  <h1>ADASTRA Pipeline</h1>
 </div>
 
 This repository contains a reproducible **Nextflow** pipeline that rebuilds the early stages of the **[ADASTRA workflow](https://www.nature.com/articles/s41467-021-23007-0)** — from mapped **ChIP-seq** experiments in **[GTRD database](https://gtrd.biouml.org/)** to the generation of **VCF files with allele-specific read counts**.
