@@ -10,7 +10,7 @@ It implements all preprocessing steps required before downstream statistical ana
 
 The pipeline performs alignment and SNP calling, corrects mapping bias with an updated NumPy-compatible version of **[WASP](https://github.com/bmvdgeijn/WASP)**, merges and filters BAM files, counts allele-specific reads, and produces a unified `allele_counts.vcf.gz` suitable for further ASB analysis.
 
-## ⚙️ Main steps
+### ⚙️ Main steps
 
 1. **Input preparation.** Reads metadata from a sample table (`samples.tsv`) and genotype file (`.vcf.gz + .tbi`).
 
@@ -24,9 +24,11 @@ The pipeline performs alignment and SNP calling, corrects mapping bias with an u
 
 6. **VCF recoding.** Assembles all results into a single `allele_counts.vcf.gz` with `sample_map.tsv`.
 
-## ✨ Dependencies
+### ✨ Tech stack with sleek badge showcase
 
-_**TL;DR: Nextflow**, Shell, Python_
+_**TL;DR: Nextflow**, Shell, Python_ 
+
+![nextflow](https://img.shields.io/badge/nextflow-%2344CC11.svg?&style=for-the-badge&logo=nextflow&logoColor=white) ![shell](https://img.shields.io/badge/shell-%234EAA25.svg?&style=for-the-badge&logo=gnu-bash&logoColor=white) ![python](https://img.shields.io/badge/python%20-%234584B6.svg?&style=for-the-badge&logo=python&logoColor=white) ![numpy](https://img.shields.io/badge/numpy-%23013243.svg?&style=for-the-badge&logo=numpy&logoColor=white) 
 
 - **Nextflow** ≥ 24  
 - **bwa**, **samtools**, **bcftools**, **tabix**  
