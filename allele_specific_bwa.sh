@@ -93,7 +93,7 @@ for reads in $(ls -1 ${main}batch${index}_reads?.txt); do
                 | samtools view -@ $threads -b > ${map_dir}${name}.bam
         fi
 
-        rm -r ${temp}${name}.sorted.bam ${temp}${name}_R1.fastq.gz ${temp}${name}_R2.fastq.gz ${temp}${name}_unpaired.fastq.gz
+        rm -r $file ${temp}${name}.sorted.bam ${temp}${name}_R1.fastq.gz ${temp}${name}_R2.fastq.gz ${temp}${name}_unpaired.fastq.gz
     done < $reads
 
     if [ "$(find ${home}mapped_se/ -type f | wc -l)" -gt 0 ]; then
