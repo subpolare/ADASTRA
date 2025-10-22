@@ -135,7 +135,7 @@ for reads in $(ls -1 ${main}batch${index}_reads?.txt); do
     rm -r ${home}mapped_se/* ${home}mapped_pe/* ${temp}* ${home}VCFs/* ${home}filter_variants/output/* ${home}remapping/* ${home}work/*
 done
 
-rm ${main}reads?.txt
+rm ${main}batch${index}_reads?.txt
 head -n 50 ${main}batch${index}_download.txt > ${main}batch${index}_reads1.txt
 head -n 100 ${main}batch${index}_download.txt | tail -n 50 > ${main}batch${index}_reads2.txt
 head -n 150 ${main}batch${index}_download.txt | tail -n 50 > ${main}batch${index}_reads3.txt
